@@ -1,0 +1,19 @@
+<h1 class="text-center pt-3" style="margin-top: 30px;" *ngIf="PostsPadre.length>0">Posts</h1>
+ <div class="container">
+  <div class="row m-0">  
+    <div class="col-md-6" *ngFor="let post of PostsPadre" >
+
+        <div class="card text-center m-4">
+            <div class="card-header">
+            Post
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">{{post.title}}</h5>
+            </div>
+            
+       <div class="card-footer text-muted">
+      <span>Usuario ID {{post.userId}}</span> 
+      </div>
+    </div>
+   </div>
+ </div>

@@ -1,0 +1,19 @@
+<h1  class="text-center pt-3">Albumes</h1>
+ <div class="container"> 
+    <div class="row m-0"> 
+       <div class="col-md-6" *ngFor="let album of albumes">
+   
+           <div class="card text-center m-4">
+             <div class="card-header">
+                Album
+             </div>
+             <div class="card-body">
+               <h5 class="card-title"><strong>Album del usuario </strong>{{album.userId}}</h5>
+               <p><strong>Titulo: <br></strong>{{album.title}}</p>
+               <a (click)="verMas(album.userId)" class="btn btn-primary btn-sm">Ver mas</a>
+            </div>
+               
+     </div>
+    </div>
+   </div>
+</div>

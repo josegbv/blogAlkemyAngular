@@ -1,0 +1,33 @@
+<div class="container">
+    <h1 class="text-center pt-3">Post</h1>
+    <div class="input-group mt-4 ">
+
+       <!--  <div class="col-11">
+            <input type="text" class="form-control" placeholder="Escribe aqui" aria-label="posts" aria-describedby="basic-addon2">
+        </div>
+        <div class="input-group-append">
+          <button class="input-group-text" id="basic-addon2">Buscar</button>
+        </div> -->
+      </div>
+
+
+ <div class="row m-0"> 
+        <div class="col-md-6" *ngFor="let post of posts" >
+
+            <div class="card text-center m-4">
+                <div class="card-header">
+                Post
+                </div>
+                <div class="card-body">
+                <h5 class="card-title">{{post.title}}</h5>
+                <a (click)="verMas(post.id)" class="btn btn-primary btn-sm">Ver mas</a>
+                </div>
+                
+        <div class="card-footer text-muted">
+          <span>Usuario ID {{post.userId}}</span> 
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+

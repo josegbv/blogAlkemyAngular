@@ -1,0 +1,29 @@
+
+
+
+
+<div class="container">
+    <div class="m-0 row justify-content-center ">
+        <div class="col-4">
+            <div class="card" style="width: auto; height: auto;">
+                <img src="https://avatars.dicebear.com/api/male/john.svg?background=white" class="card-img-top" alt="...">
+                <div class="card-body text-center p-4">
+                  <h5 class="card-title">Hola Soy <strong>{{user.name}} </strong></h5>
+                  <p class="card-text"> Mi sitio Web es: {{user.website}} <br> Trabajo en: {{user.company.name}}</p>
+                <div class="text-center">
+                    <a (click)="verPosts(user.id)" class="btn btn-primary m-1">Posts</a>
+                    <a (click)="verAlbumes(user.id)" class="btn btn-primary m-1">Albumes</a>
+                    <a (click)="verTodos(user.id)" class="btn btn-primary m-1">Todos</a>
+                  </div>
+                </div>
+            
+              </div>
+        </div>
+    </div>
+
+</div>
+
+<app-user-posts   [PostsPadre]="userPost" > </app-user-posts>
+<app-user-albums  [albumPadre]="userAlbumes" ></app-user-albums>
+<app-user-todos   [todosPadre]="userTodos"></app-user-todos>
+

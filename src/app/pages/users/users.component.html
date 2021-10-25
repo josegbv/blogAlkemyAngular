@@ -1,0 +1,24 @@
+<h1 class="text-center pt-3">Usuarios del Blog</h1>
+
+  <div class="row m-0"> 
+    <div class="col-md-6" *ngFor="let user of users">
+
+        <div class="card text-center m-4">
+            <div class="card-header">
+             Usuario
+        </div>
+
+        <div class="card-body">
+            <h5 class="card-title">{{user.name}}</h5>
+            <img style="width: 50px;" src="https://avatars.dicebear.com/api/male/john.svg?background=%230000ff" class="card-img-top" alt="..."><br>
+            <button (click)="verMas(user.id)" class="btn btn-primary btn-sm m-2">Ver mas</button>
+        </div>
+            
+    <div class="card-footer">
+      <span>Email {{user.email}}</span> 
+    </div>
+   </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,65 @@
+<h1  class="text-center pt-3">Album</h1>
+
+<div class="row m-0"> 
+    <div class="col-md-12">
+
+        <div class="card text-center m-4">
+            <div class="card-header">
+             Album del Usuario {{user.name}}
+            </div>
+            <div class="card-body">
+            <h5 class="card-title">Titulo <br>{{albumesPhoto[0].title}}</h5>
+            <div class="text-center">
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Galeria de fotos
+                </button>
+                
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Galeria de Fotos</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+
+                            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                                
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img [src]=" albumesPhoto[0].url" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item" *ngFor="let img of albumesPhoto">
+                                    <img [src]="img.url" class="d-block w-100" alt="...">
+                                  </div>
+                                  
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+
+                <a (click)="detalleUsuario(user.id)" class="btn btn-success m-1">Detalles del usuario</a>
+              </div>
+            </div>
+            
+   </div>
+  </div>
+</div>
+
